@@ -20,9 +20,9 @@ The problem: light reaching the interior sphere (with flipped faces), lighting t
 
 - Made a totally black skybox
 - Set material to render both faces
-- Scaled sphere down to
+- Scaled sphere down to 1/10th size, like 65m across 
 - Shadows Settings of PC_RPAsset
-  - 130 seems to be the threshold
+  - 130 seems to be the threshold (so scaled back up, that would be 1300. good to know!)
 - Unity uses distance-based light clipping, so it will only do e.g. 1000 metres of real-time light **for all light types**
 - Adjusting the slits in the Shadows settings
 

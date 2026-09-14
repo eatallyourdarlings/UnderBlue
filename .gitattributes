@@ -1,3 +1,4 @@
 *.blend filter=lfs diff=lfs merge=lfs -text
 *.fbx filter=lfs diff=lfs merge=lfs -text
 Assets/Blender-Exports/*.fbx filter=lfs diff=lfs merge=lfs -text
+Assets/Blender-Exports/* filter=lfs diff=lfs merge=lfs -text

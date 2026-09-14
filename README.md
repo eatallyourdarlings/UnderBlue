@@ -2,6 +2,9 @@
 
 # UnderBlue
 
+Using Unity 6000.3.5.f2
+Targeting Web Export.
+
 ## Import Scene Process...
 
 - Export fbx from Blender with the "Unity Scene" 

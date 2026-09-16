@@ -6,6 +6,10 @@
 - Targeting Web Export.
 - Blender 3.6
 
+Remember to take screen recordings and screenshots, keeping em at /Screenshots/ and on Youtube:
+- [DataDesert BlockOut](https://www.youtube.com/watch?v=TyK27t1xsFs) 
+- [GeneBomb SpeedRun](https://www.youtube.com/watch?v=zasvFmSZvT4)
+
 ## Audio
 
 Note for halfsunk: There's an Audio Source at (0,0) in the DataDesert. You can duplicate this to add more sound sources to the mix. It's non-directional (the slider is all the way to 2D), and we will likely not do much directional sound because it would create so many duplicate Audio Sources in each scene. Rather fade in sounds based on your proximity to Prefabs, because there will be so many repetitions of the same sound source (aerials, electrical pylons etc.). So consider a max volume and a minimum ambient volume for each sound source that should otherwise be directional, and we can probably fake it pretty well.
@@ -13,7 +17,7 @@ Note for halfsunk: There's an Audio Source at (0,0) in the DataDesert. You can d
 - [Audio Assets Spreadsheet](https://drive.proton.me/urls/Q41W5Z9FPG#MRHPAmrbQEdB)
 - [Music Inspo](https://www.youtube.com/playlist?list=PLBi5dMy5mvJ4)
 
-### Assets
+### Assets Used
 - [Freesound - Infrasound - 18hz - Sine wave.wav by Headphaze](https://freesound.org/people/Headphaze/sounds/235214/)
 
 ## Dev notes

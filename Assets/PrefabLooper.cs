@@ -7,7 +7,8 @@ public class PrefabLooper : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public int loops = 10;
-    public float step = 0.0123f;
+    public float noiseMultiplier = 0.0123f;
+    public float distanceMultiplier = 5.5f;
     public float speed = 0.1f;
     private GameObject[,] terrain;
 
@@ -19,7 +20,7 @@ public class PrefabLooper : MonoBehaviour
         // for(int x = 1; x < loops; x++){
         //     Debug.Log(x);
         //     for(int z = 1; z < loops; z++ ){
-        //         float y = Mathf.PerlinNoise(x * step, z * step);
+        //         float y = Mathf.PerlinNoise(x * noiseMultiplier, z * noiseMultiplier);
         //         // int y = x+z;
         //         Instantiate(cube, new Vector3(x,y,z), Quaternion.identity);
         //     }
@@ -33,7 +34,7 @@ public class PrefabLooper : MonoBehaviour
             for(int z = 1; z < loops; z++ )
             {
                 // int y = x+z;
-                terrain[x,z] = Instantiate(prefab, new Vector3(x,0,z), Quaternion.identity);
+                terrain[x,z] = Instantiate(prefab, new Vector3(x * distanceMultiplier,0,z * distanceMultiplier), Quaternion.identity);
             }
         }
     }
@@ -57,8 +58,8 @@ public class PrefabLooper : MonoBehaviour
             // Debug.Log(x);
             for(int z = 1; z < loops; z++ )
             {
-                float y = Mathf.PerlinNoise(x * step + Time.time * speed, z * step + Time.time * speed) * 3f;
-                terrain[x, z].transform.position = new Vector3(x,y,z);
+                float y = Mathf.PerlinNoise(x * noiseMultiplier + Time.time * speed, z * noiseMultiplier + Time.time * speed) * 3f;
+                terrain[x, z].transform.position = new Vector3(x * distanceMultiplier,y,z * distanceMultiplier);
 
             }
 

@@ -255,7 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f64fdecd43c4c42b1e9946f751cfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubeLooper
-  cube: {fileID: 7419994320600841899, guid: 5df8e3dda060d4dfb8c1e2902936ca1c, type: 3}
+  prefab: {fileID: 7419994320600841899, guid: 5df8e3dda060d4dfb8c1e2902936ca1c, type: 3}
+  loops: 100
+  step: 0.123
+  speed: 0.1
 --- !u!1 &1080936984
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +380,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1160700467}
-  - component: {fileID: 1160700468}
   m_Layer: 0
   m_Name: AerialArray
   m_TagString: Untagged
@@ -400,19 +402,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1160700468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160700466}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2afedce39e2e469eb788d0b421545cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AerialArray
-  prefab: {fileID: 0}
 --- !u!1 &1746535096
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-1705032847584578612
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep3_{-1705032847584578612}
+  m_AudioClip: {fileID: 8300000, guid: b9ea04151c312484a86c74bfa3e8f54a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2516334799478168469
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep1_{2516334799478168469}
+  m_AudioClip: {fileID: 8300000, guid: ec36c43229a5a4375852bca982547758, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5730975753300692125
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep2_{5730975753300692125}
+  m_AudioClip: {fileID: 8300000, guid: 00f51dccbeecf4ece960367f16469195, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Footsteps
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0.7
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -600.17834, y: 171.15274}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0.05}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 2516334799478168469}
+  - {fileID: 5730975753300692125}
+  - {fileID: -1705032847584578612}
+  m_AvoidRepeatingLast: 1
+  m_PlaybackMode: 2
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 0
+  m_LoopMode: 0
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 1
+  m_LoopCountRandomizationEnabled: 0

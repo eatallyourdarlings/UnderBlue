@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f64fdecd43c4c42b1e9946f751cfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubeLooper
-  prefab: {fileID: 7419994320600841899, guid: 5df8e3dda060d4dfb8c1e2902936ca1c, type: 3}
+  prefabs: []
   xCount: 10
   zCount: 10
   noiseMultiplier: 0.0123
@@ -417,7 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f64fdecd43c4c42b1e9946f751cfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrefabLooper
-  prefab: {fileID: 919132149155446097, guid: 92e2f10a2b6224d49971158087ca6bb7, type: 3}
+  prefabs:
+  - {fileID: 919132149155446097, guid: cf968211d0f93493a88d0a0aa58885aa, type: 3}
   xCount: 3
   zCount: 10
   noiseMultiplier: 0.0123

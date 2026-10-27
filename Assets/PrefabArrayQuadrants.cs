@@ -1,18 +1,20 @@
 using UnityEngine;
 
 // this script is about replicating Blender's Array modifier basically, but mirrored/doubled, and adding a little offset to each of the object's positions using a scrolling noise texture.
-public class PrefabLooper : MonoBehaviour
+public class PrefabArrayQuadrant : MonoBehaviour
 {
 
-    public GameObject[] prefabMeshes;
+    public GameObject[] aerialMeshes;
+    public GameObject baseMesh;
 
     public int quadrantCount = 11;
     public float noiseMultiplier = 0.022f;
     public float distanceMultiplier = 22f;
+    public float rotationRange = 22f;
     public float speed = 0.22f;
 
     // count of this array should be quadrantCount * quadrantCount * 4;
-    private GameObject[,] prefabArray;
+    private GameObject[,] aerialObjects;
     private float startingX;
     private float startingZ;
     private Vector3 centrePosition;
@@ -20,7 +22,7 @@ public class PrefabLooper : MonoBehaviour
 
     void Start()
     {
-        prefabArray = new GameObject[quadrantCount * 2, quadrantCount * 2];
+        aerialObjects = new GameObject[quadrantCount * 2, quadrantCount * 2];
         centrePosition = transform.position;
 
         // OK SO I KNOW THE PROBLEM IS BECAUSE I WAS TRYING TO DIVIDE THE INDEX NUMBERS AND THATS SILLY BECAUSE THEY GOTTA BE INDICES AND SO I WAS GETTING LESS INSTANTIATIONS -- THIS COULD BE AN INTERESTING WAY TO CREATE SOME VARIATION THROUGH COMPOUND ERROR THOUGH I GUESS I'LL SEE
@@ -45,7 +47,6 @@ public class PrefabLooper : MonoBehaviour
         {
             for(int z = 0; z < quadrantCount * 2; z++)
             {
-                // create a random rotation here?
                 float xPos =  startingX + (x * distanceMultiplier) - distanceMultiplier / 2;
                 float zPos =  startingZ + (z * distanceMultiplier) - distanceMultiplier / 2;
                 AddToArray(x, z, xPos, zPos);
@@ -62,12 +63,19 @@ public class PrefabLooper : MonoBehaviour
         // x = Mathf.Abs(x);
         // z = Mathf.Abs(z);
         
+        // create a random rotation here and use it for both??
+
+        float yRotation = Random.Range(-rotationRange, rotationRange);
     
         // this is the bit where you would choose a random prefab from the array of meshes
+        GameObject mesh = aerialMeshes[Random.Range(0, aerialMeshes.Length)];
+
+        aerialObjects[x,z] = Instantiate(mesh, new Vector3(xPos, 0, zPos), Quaternion.Euler(0, yRotation, 0), transform);
+        
+        // Quaternion.identity is (0,0,0) as a Vector3
+        Instantiate(baseMesh, new Vector3(xPos, 0, zPos), Quaternion.Euler(0, yRotation, 0), transform);
 
         // last variable in Instantiate is the parent -- set to the object that has this script on it.
-        prefabArray[x,z] = Instantiate(prefabMeshes[0], new Vector3(xPos, 0, zPos), Quaternion.identity, transform);
-
         
     }
 
@@ -92,7 +100,7 @@ public class PrefabLooper : MonoBehaviour
                 // wobbling in the oncewaves
                 // scrolling the noise texture!
                 float newY = Mathf.PerlinNoise(x * noiseMultiplier + Time.time * speed, z * noiseMultiplier + Time.time * speed) * 3f;
-                prefabArray[x, z].transform.position = new Vector3(prefabArray[x, z].transform.position.x, newY, prefabArray[x, z].transform.position.z);
+                aerialObjects[x, z].transform.position = new Vector3(aerialObjects[x, z].transform.position.x, newY, aerialObjects[x, z].transform.position.z);
             }
 
         

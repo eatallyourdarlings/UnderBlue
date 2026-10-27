@@ -1,10 +1,9 @@
-// using UnityEngine;
+using UnityEngine;
 
 // SCRAPYARD 
 
-// // this script is about replicating Blender's Array modifier basically, but mirrored/doubled, and adding a little offset to each of the object's positions using a scrolling noise texture.
-// public class PrefabLooper : MonoBehaviour
-// {
+public class PrefabLooper : MonoBehaviour
+{
 
 //     public GameObject[] prefabs;
 //     public Transform centrePosition = transform;
@@ -208,4 +207,4 @@
         
 //         }
 //     }
-// }
+}

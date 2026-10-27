@@ -1,0 +1,101 @@
+using UnityEngine;
+
+// this script is about replicating Blender's Array modifier basically, but mirrored/doubled, and adding a little offset to each of the object's positions using a scrolling noise texture.
+public class PrefabLooper : MonoBehaviour
+{
+
+    public GameObject[] prefabMeshes;
+
+    public int quadrantCount = 11;
+    public float noiseMultiplier = 0.022f;
+    public float distanceMultiplier = 22f;
+    public float speed = 0.22f;
+
+    // count of this array should be quadrantCount * quadrantCount * 4;
+    private GameObject[,] prefabArray;
+    private float startingX;
+    private float startingZ;
+    private Vector3 centrePosition;
+    
+
+    void Start()
+    {
+        prefabArray = new GameObject[quadrantCount * 2, quadrantCount * 2];
+        centrePosition = transform.position;
+
+        // OK SO I KNOW THE PROBLEM IS BECAUSE I WAS TRYING TO DIVIDE THE INDEX NUMBERS AND THATS SILLY BECAUSE THEY GOTTA BE INDICES AND SO I WAS GETTING LESS INSTANTIATIONS -- THIS COULD BE AN INTERESTING WAY TO CREATE SOME VARIATION THROUGH COMPOUND ERROR THOUGH I GUESS I'LL SEE
+
+
+    // global position of parent is (576, 0, 6.5)
+    // TRY USING LOCAL TRANSFORM POSITION?
+
+        //quadrants!
+        // start at 1 to avoid dividing by 0??
+        // 1 x,z
+        // 2 x,-z
+        // 3 -x,-z
+        // 4 -x,z
+
+        startingX = centrePosition.x - quadrantCount * distanceMultiplier;
+        startingZ = centrePosition.x - quadrantCount * distanceMultiplier;
+        Debug.Log($"{startingX}, {startingZ} adding to Array [:");
+        // Vector3 startingPosition = new Vector3(startingX, 0, startingZ);
+
+        for(int x = 0; x < quadrantCount * 2; x++)
+        {
+            for(int z = 0; z < quadrantCount * 2; z++)
+            {
+                // create a random rotation here?
+                float xPos =  startingX + (x * distanceMultiplier) - distanceMultiplier / 2;
+                float zPos =  startingZ + (z * distanceMultiplier) - distanceMultiplier / 2;
+                AddToArray(x, z, xPos, zPos);
+            }
+        }
+    }
+
+    void AddToArray(int x, int z, float xPos, float zPos){
+
+        // float newX = transform.position.x + x * distanceMultiplier;
+        // float newZ = transform.position.z + z * distanceMultiplier;
+        // Debug.Log($"{newX}, {newZ}");
+        
+        // x = Mathf.Abs(x);
+        // z = Mathf.Abs(z);
+        
+    
+        // this is the bit where you would choose a random prefab from the array of meshes
+
+        // last variable in Instantiate is the parent -- set to the object that has this script on it.
+        prefabArray[x,z] = Instantiate(prefabMeshes[0], new Vector3(xPos, 0, zPos), Quaternion.identity, transform);
+
+        
+    }
+
+
+    // PROCEDURAL PLANE -- advice from Max is to not do it.
+    // how big is your plane?
+    // how far apart are the vertices (1m?)
+    // apply offset to each point of the vertex
+    // DOING PROCEDURAL MESH GENERATION IS REALLY TEDIOUS
+    // pick a random Prefab from an array of aerial meshes
+    // create a slightly randomised rotation on the Y axis
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        for(int x = 0; x < quadrantCount * 2; x++)
+        {
+            // Debug.Log(x);
+            for(int z = 0; z < quadrantCount * 2; z++ )
+            {
+                // wobbling in the oncewaves
+                // scrolling the noise texture!
+                float newY = Mathf.PerlinNoise(x * noiseMultiplier + Time.time * speed, z * noiseMultiplier + Time.time * speed) * 3f;
+                prefabArray[x, z].transform.position = new Vector3(prefabArray[x, z].transform.position.x, newY, prefabArray[x, z].transform.position.z);
+            }
+
+        
+        }
+    }
+}

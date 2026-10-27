@@ -8,10 +8,10 @@ public class PrefabArrayQuadrant : MonoBehaviour
     public GameObject baseMesh;
 
     public int quadrantCount = 11;
-    public float noiseMultiplier = 0.022f;
+    public float noiseScale = 0.011f;
+    public float noiseSpeed = 0.11f;
     public float distanceMultiplier = 22f;
     public float rotationRange = 22f;
-    public float speed = 0.22f;
 
     // count of this array should be quadrantCount * quadrantCount * 4;
     private GameObject[,] aerialObjects;
@@ -99,7 +99,7 @@ public class PrefabArrayQuadrant : MonoBehaviour
             {
                 // wobbling in the oncewaves
                 // scrolling the noise texture!
-                float newY = Mathf.PerlinNoise(x * noiseMultiplier + Time.time * speed, z * noiseMultiplier + Time.time * speed) * 3f;
+                float newY = Mathf.PerlinNoise(x * noiseScale + Time.time * noiseSpeed, z * noiseScale + Time.time * noiseSpeed) * 3f;
                 aerialObjects[x, z].transform.position = new Vector3(aerialObjects[x, z].transform.position.x, newY, aerialObjects[x, z].transform.position.z);
             }
 

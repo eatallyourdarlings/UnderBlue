@@ -2786,9 +2786,10 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: cf968211d0f93493a88d0a0aa58885aa, type: 3}
   baseMesh: {fileID: 3285075574198816291, guid: 197d519bd44f4487693efb0fd3afeb88, type: 3}
   quadrantCount: 11
-  noiseMultiplier: 0.022
-  distanceMultiplier: 22
-  speed: 0.22
+  noiseScale: 0.022
+  noiseSpeed: 0.022
+  distanceMultiplier: 44
+  rotationRange: 22
 --- !u!1 &1933977389
 GameObject:
   m_ObjectHideFlags: 0

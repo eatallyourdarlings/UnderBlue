@@ -21,6 +21,19 @@ Note for halfsunk: There's an Audio Source at (0,0) in the DataDesert. You can d
 - [Freesound - Infrasound - 18hz - Sine wave.wav by Headphaze](https://freesound.org/people/Headphaze/sounds/235214/)
 
 ## Dev notes
+### Blenber
+
+I guess there's no fuggin hierarchies allowed in the Blender scene because it keeps fwuckin with the rotation when exporting to FBX... game engines r so cursed...
+
+Wire Bezier settings:
+- 3D shape
+  - Resolution Preview: 3
+  - Twist Method: Minimum
+  - Fill Mode: Half
+  - Curve Deform: Radius
+- Bevel: Round
+  - Resolution: 1
+
 ### Import Scene Process
 
 - Export fbx from Blender with the "Unity Scene" 

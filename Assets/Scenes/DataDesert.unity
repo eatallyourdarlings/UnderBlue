@@ -1586,6 +1586,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.94
       objectReference: {fileID: 0}
+    - target: {fileID: -7396052288849979532, guid: 8f52ef101fda047ed9a0900fe4873b9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6485408413390834639, guid: 8f52ef101fda047ed9a0900fe4873b9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2782,13 +2786,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrefabArrayQuadrant
   aerialMeshes:
-  - {fileID: 919132149155446097, guid: 52759891eee504d62b7ca151719cb313, type: 3}
+  - {fileID: 919132149155446097, guid: 73e8034b8f7f943bbbf422ac28542b90, type: 3}
+  - {fileID: 919132149155446097, guid: 7072bb80e43c24b3d8e965fa216858a6, type: 3}
+  - {fileID: 919132149155446097, guid: 99311936640714eacbad38a86a56030c, type: 3}
+  - {fileID: 919132149155446097, guid: df8ffb2ff06184e5a8376b1ba187f68b, type: 3}
+  - {fileID: 919132149155446097, guid: 4189cebc7956b425eb2620c8232062ab, type: 3}
+  - {fileID: 919132149155446097, guid: 9b5197fe8d5a94863936e6780cfe957b, type: 3}
+  - {fileID: 919132149155446097, guid: 0688e8c8ee06d43c2a36a734344b4aa7, type: 3}
+  - {fileID: 919132149155446097, guid: fe83a8871d0204847a4f050dc1bc75fe, type: 3}
+  - {fileID: 919132149155446097, guid: 2dcc375cbced349a8a24d4eaa703e513, type: 3}
   - {fileID: 919132149155446097, guid: cf968211d0f93493a88d0a0aa58885aa, type: 3}
+  - {fileID: 919132149155446097, guid: 52759891eee504d62b7ca151719cb313, type: 3}
   baseMesh: {fileID: 3285075574198816291, guid: 197d519bd44f4487693efb0fd3afeb88, type: 3}
   quadrantCount: 11
   noiseScale: 0.022
   noiseSpeed: 0.022
-  distanceMultiplier: 44
+  distanceMultiplier: 33
   rotationRange: 22
 --- !u!1 &1933977389
 GameObject:

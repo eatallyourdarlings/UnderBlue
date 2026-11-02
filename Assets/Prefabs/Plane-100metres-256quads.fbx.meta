@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f52ef101fda047ed9a0900fe4873b9c
+guid: fbc3a0e5174b34f02962af4d3ca53b50
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Shadow
-    second: {fileID: 2100000, guid: 2de3fc5a578c24d6eb63770177fb8893, type: 2}
+      name: Salt
+    second: {fileID: 2100000, guid: f34d4dbeca7324952aaef3da9a6c53aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1

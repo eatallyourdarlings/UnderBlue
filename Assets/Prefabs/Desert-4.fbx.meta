@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: f22d6ed5e150d4c3f9172008e78e6069
+guid: 8f52ef101fda047ed9a0900fe4873b9c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Player
+    second: {fileID: 2100000, guid: 6f0dc068fdc884b798f034bf8393528f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rust
+    second: {fileID: 2100000, guid: 8c1e595f615e44f039030b29fcda5c88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Salt
+    second: {fileID: 2100000, guid: ed5b7f650a920464da66f2024d02bf65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shadow
+    second: {fileID: 2100000, guid: 2de3fc5a578c24d6eb63770177fb8893, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

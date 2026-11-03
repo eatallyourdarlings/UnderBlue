@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: FloorIce
   m_Shader: {fileID: -6465566751694194690, guid: 082c1be31d42342a58e558aff4ccf068, type: 3}
-  m_Parent: {fileID: 2100000, guid: 9dd082532f2d64f37a87c10dd40bb500, type: 2}
+  m_Parent: {fileID: 2100000, guid: cb62b87c03b734e4bb8bd07a1419ea0a, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -27,6 +27,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _ColorPower: 4
+    - _Height: 0.3
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

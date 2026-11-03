@@ -6,6 +6,7 @@ public class PrefabArrayQuadrant : MonoBehaviour
 
     public GameObject[] aerialMeshes;
     public GameObject baseMesh;
+    // public Vector3 baseMeshScale = 1f;
 
     public int quadrantCount = 11;
     public float noiseScale = 0.011f;

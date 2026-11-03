@@ -10,6 +10,15 @@ Remember to take screen recordings and screenshots, keeping em at /Screenshots/ 
 - [DataDesert BlockOut](https://www.youtube.com/watch?v=TyK27t1xsFs) 
 - [GeneBomb SpeedRun](https://www.youtube.com/watch?v=zasvFmSZvT4)
 
+
+## things i am proud of!!
+
+  - technical art tricks and shortcuts I learnt and practiced, particularly making the most of one scrolling fog ShaderGraph
+  - modelling with curves and array modifier (for the hooks, the barbed wire, the chains)
+  - manually messing with Level of Detail; I'd been wanting to figure out how to do that for a while [:
+  - collaborating with a friend on sound design for the first time!
+  - the PrefabArrayQuadrant that makes the big grid of meshes, basically replicating the effect of 2 x Blender Array modifier.
+
 ## Audio
 
 Note for halfsunk: There's an Audio Source at (0,0) in the DataDesert. You can duplicate this to add more sound sources to the mix. It's non-directional (the slider is all the way to 2D), and we will likely not do much directional sound because it would create so many duplicate Audio Sources in each scene. Rather fade in sounds based on your proximity to Prefabs, because there will be so many repetitions of the same sound source (aerials, electrical pylons etc.). So consider a max volume and a minimum ambient volume for each sound source that should otherwise be directional, and we can probably fake it pretty well.
@@ -21,6 +30,8 @@ Note for halfsunk: There's an Audio Source at (0,0) in the DataDesert. You can d
 - [Freesound - Infrasound - 18hz - Sine wave.wav by Headphaze](https://freesound.org/people/Headphaze/sounds/235214/)
 
 ## Dev notes
+
+
 ### Blenber
 
 I guess there's no fuggin hierarchies allowed in the Blender scene because it keeps fwuckin with the rotation when exporting to FBX... game engines r so cursed...
@@ -41,7 +52,7 @@ Wire Bezier settings:
   - Set the transform origins of the scene to 0,0
   - c
 
-### Controlling lighting inside of the sphere...
+### Controlling lighting inside of a mesh...
 
 The problem: light reaching the interior sphere (with flipped faces), lighting the bottom, whereas light reaches 
 
@@ -56,7 +67,3 @@ The problem: light reaching the interior sphere (with flipped faces), lighting t
 - Adjusting the slits in the Shadows settings
 
 Another potential solution: collider that decreases the Shadow distance once you drop into the Bomb.
-
-## Spawnpoints...
-1331,1331,0
-0,90,0

@@ -62,10 +62,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorPower: 121
+    - _ColorPower: 0.1
     - _DepthFade: 121
     - _FogHeight: 13.98
-    - _Height: 22
+    - _Height: 33
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

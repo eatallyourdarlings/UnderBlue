@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SaltStar
-  m_Shader: {fileID: -6465566751694194690, guid: 265257a5ccef8480f9c7572866704f96, type: 3}
-  m_Parent: {fileID: 2100000, guid: bfe7de2ee7f524cf99c6a0ad2527f62b, type: 2}
+  m_Name: FloorSalt
+  m_Shader: {fileID: -6465566751694194690, guid: 082c1be31d42342a58e558aff4ccf068, type: 3}
+  m_Parent: {fileID: 2100000, guid: 9dd082532f2d64f37a87c10dd40bb500, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -23,17 +23,10 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _ColorRamp:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MaskTexture:
-        m_Texture: {fileID: 2800000, guid: 5d4e69eb646f44e359633f7784b86163, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _ColorPower: 4
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

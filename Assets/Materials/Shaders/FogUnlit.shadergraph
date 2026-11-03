@@ -903,7 +903,7 @@
     "m_Title": "DEPTH FADE",
     "m_Position": {
         "x": -678.5,
-        "y": 1178.0001220703125
+        "y": 1178.0
     }
 }
 
@@ -1236,7 +1236,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "19f51993cada477391e8feeb091e352a",
     "m_Id": 0,
-    "m_DisplayName": "NoiseTileScale",
+    "m_DisplayName": "TileScale",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2070,7 +2070,7 @@
     "m_ObjectId": "3d210a7b58e645349d2533a5c4474902",
     "m_Title": "MAIN TEXTURE",
     "m_Position": {
-        "x": -1655.4998779296875,
+        "x": -1655.5,
         "y": -218.0
     }
 }
@@ -4137,7 +4137,7 @@
     "m_Title": "MASK",
     "m_Position": {
         "x": -435.0,
-        "y": 568.9998779296875
+        "y": 569.0
     }
 }
 
@@ -5379,7 +5379,7 @@
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_RenderFace": 2,
+    "m_RenderFace": 0,
     "m_AlphaClip": false,
     "m_CastShadows": false,
     "m_ReceiveShadows": true,

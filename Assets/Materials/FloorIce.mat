@@ -28,7 +28,8 @@ Material:
     m_Floats:
     - _ColorPower: 4
     - _Height: 0.3
-    m_Colors: []
+    m_Colors:
+    - _TileScale: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2127778372236173398

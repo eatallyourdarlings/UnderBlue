@@ -39,8 +39,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _ColorPower: 0
-    - _Height: 0.04
+    - _ColorPower: 0.57
+    - _Height: 0.2
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -394,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.6
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4080,15 +4080,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7e93e132cfe24152b8c98fd9bc6117d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7e93e132cfe24152b8c98fd9bc6117d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7e93e132cfe24152b8c98fd9bc6117d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7e93e132cfe24152b8c98fd9bc6117d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4314,6 +4314,7 @@ GameObject:
   - component: {fileID: 2036758657}
   - component: {fileID: 2036758659}
   - component: {fileID: 2036758660}
+  - component: {fileID: 2036758661}
   m_Layer: 0
   m_Name: MaskTransform
   m_TagString: Interactive
@@ -4321,22 +4322,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2036758657
-Transform:
+--- !u!224 &2036758657
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036758656}
-  serializedVersion: 2
   m_LocalRotation: {x: -0.69146025, y: 0.06894563, z: 0.06658002, w: 0.71602815}
-  m_LocalPosition: {x: 0, y: -33, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1982160151}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -88, y: 11, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -33}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &2036758659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4372,8 +4377,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorController
   objectToAnimate: {fileID: 1982160155}
   booleanName: PickedUp
+  isMask: 1
   isLocked: 0
   hasBeenInteractedWith: 0
+--- !u!114 &2036758661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036758656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c77cb23a7da48a1af12eeebd9b15ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MaskPickup
+  camera: {fileID: 729351239}
 --- !u!1 &2060254392
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class InteractionController : MonoBehaviour
             //Only allow interacting with correclty tagged objects, meaning we wont collect random objects
             if (hitInfo.collider.gameObject.CompareTag("Interactive"))
             {
-                Debug.Log("Looking at Interactive");
+                // Debug.Log("Looking at Interactive");
                 objectCurrentlyOver = hitInfo.collider.gameObject;
                 if(objectCurrentlyOver.GetComponent<AnimatorController>() != null)
                 {

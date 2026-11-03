@@ -1,13 +1,25 @@
-// using UnityEngine;
+using UnityEngine;
 
-// public class MaskPickup : MonoBehaviour
-// {
-//     // change the parent to the Camera
-//     // play animation of mask pickup
-//     // change the Post Processing settings to be a vignette
+// the functions in this like SetParent could be handy on other objects, but that's an optimisation for later...
 
-//     public GameObject camera;
-//     public Collider collider;
+public class MaskPickup : MonoBehaviour
+{
+    public GameObject camera;
+
+    public void doPickup(){
+        
+        // change the parent to the Camera
+
+        Debug.Log("do pickup");
+        SetParent(camera);
+
+        // play animation of mask pickup
+        // change the Post Processing settings to be a heavy, offset vignette
+
+
+
+    
+
 
 //     // do something with the lighting?
 //         // increase the width of the spotlight??
@@ -18,39 +30,27 @@
 
 //     // change the Character controller state to climbing??
 
+    }
 
 
-//     // Changing the parent will modify the parent-relative position, scale and rotation but keep the world space position, rotation and scale the same.
-//     // public void SetParent(GameObject newParent)
-//     // {
-//     //     //Makes the GameObject "newParent" the parent of the GameObject "player".
-//     //     transform.parent = newParent.transform;
+    // Changing the parent will modify the parent-relative position, scale and rotation but keep the world space position, rotation and scale the same.
+    private void SetParent(GameObject newParent)
+    {
+        //Makes the GameObject "newParent" the parent of the GameObject "player".
+        transform.parent = newParent.transform;
 
-//     //     //Display the parent's name in the console.
-//     //     Debug.Log("Parent: " + transform.parent.name);
+        //Display the parent's name in the console.
+        Debug.Log("Parent: " + transform.parent.name);
 
-//     //     // Check if the new parent has a parent GameObject.
-//     //     if (newParent.transform.parent != null)
-//     //     {
-//     //         //Display the name of the grand parent of the player.
-//     //         Debug.Log("Grand parent: " + transform.parent.parent.name);
-//     //     }
-//     // }
+        // Check if the new parent has a parent GameObject.
+        if (newParent.transform.parent != null)
+        {
+            //Display the name of the grand parent of the player.
+            Debug.Log("Grand parent: " + transform.parent.parent.name);
+        }
+    }
 
-
-//     // Start is called once before the first execution of Update after the MonoBehaviour is created
-//     void Start()
-//     {
-//         //
-        
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         // collider.OnTriggerEnter(other){}
-        
-//     }
+// public Collider collider;
 
 //     //Upon collision with another GameObject, this GameObject will reverse direction
 //     private void OnTriggerEnter(Collider other)
@@ -67,4 +67,4 @@
 
 //         // Input.GetAxis("Horizontal")
 //     }
-// }
+}

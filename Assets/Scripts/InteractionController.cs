@@ -52,7 +52,7 @@ public class InteractionController : MonoBehaviour
         //use an array for the components to enable using more than one on a single collider
         if(Mouse.current.leftButton.IsPressed() && objectCurrentlyOver != null)
         {
-            Debug.Log("Clicking on Interactive!");
+            // Debug.Log("Clicking on Interactive!");
             AnimatorController[] animatorControllers;
             animatorControllers = objectCurrentlyOver.GetComponents<AnimatorController>();
             if(animatorControllers.Length > 0)

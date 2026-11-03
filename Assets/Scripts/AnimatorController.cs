@@ -15,7 +15,7 @@ public class AnimatorController : MonoBehaviour
     public void ObjectClickedOn()
     {
         // if(isLocked == false)
-        if(hasBeenInteractedWith == false)
+        if(!hasBeenInteractedWith && !isLocked)
         {
             objectToAnimate.SetBool(booleanName, true);
             hasBeenInteractedWith = true;
@@ -23,6 +23,7 @@ public class AnimatorController : MonoBehaviour
         }
 
         if(isMask){
+            // transform.GetChild(0).gameObject.
             GetComponent<MaskPickup>().doPickup();
         }
     }

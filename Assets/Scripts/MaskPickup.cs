@@ -10,8 +10,10 @@ public class MaskPickup : MonoBehaviour
         
         // change the parent to the Camera
 
-        Debug.Log("do pickup");
+        Debug.Log("Mask Do Pickup!");
         SetParent(camera);
+        transform.localPosition = new Vector3(0,0,0.6f);
+        transform.localRotation = Quaternion.Euler(new Vector3(-90f,0,0));
 
         // play animation of mask pickup
         // change the Post Processing settings to be a heavy, offset vignette

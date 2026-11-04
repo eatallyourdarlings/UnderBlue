@@ -3,12 +3,16 @@ using UnityEngine;
 public class VerticalClimbingPlayer : MonoBehaviour
 {
 
-    public GameObject newParent;
+    public GameObject wellClimbTransform;
+    public Collider wellClimbTrigger;
+    private FirstPersonDrifter drifter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // ACTIVATE VERTICAL CLIMB COMPONENT SO THAT THESE ARE CALLED ON START
+        //ACTIVATE VERTICAL CLIMB COMPONENT SO THAT THESE ARE CALLED ON START
+        
+        // MaskController sets this off!
 
         // get values as a backup then store them to change them back again later
         // MouseLook.Sensitivity
@@ -20,7 +24,6 @@ public class VerticalClimbingPlayer : MonoBehaviour
         // 
 
         // move the Transform upwards
-        // don't use another fucking animation
 
 
         // Changing the parent will modify the parent-relative position, scale and rotation but keep the world space position, rotation and scale the same.
@@ -32,18 +35,39 @@ public class VerticalClimbingPlayer : MonoBehaviour
                 //Makes the GameObject "newParent" the parent of the GameObject "player".
 
         Debug.Log("Climby On!");
-        transform.parent = newParent.transform;
+        transform.parent = wellClimbTransform.transform;
+
+        wellClimbTransform.GetComponent<AnimatorController>().ObjectClickedOn();
+
+        drifter = GetComponent<FirstPersonDrifter>();
+        // drifter.gravity = 0;
+        // Debug.Log($"Drifter Gravity: {drifter.gravity}");
+        drifter.enabled = false;
 
         //Display the parent's name in the console.
         Debug.Log("Parent: " + transform.parent.name);
 
         // Check if the new parent has a parent GameObject.
-        if (newParent.transform.parent != null)
+        if (wellClimbTransform.transform.parent != null)
         {
             //Display the name of the grand parent of the player.
             Debug.Log("Grand parent: " + transform.parent.parent.name);
         }
 
+
+
+        // get PostProcessing Asset
+        // Debug.Log("Set Post Processy");
+
+        // drags the player upwards, then changes the PostProcessing.
+
+
+        // on Well Climb Trigger
+
+
+
+
+        // RESET THE PARENT TRANSFORM
         // this.transform.parent = null;
         
     }

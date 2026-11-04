@@ -3,28 +3,15 @@ using UnityEngine;
 public class MaskController : MonoBehaviour
 {
 
-    public GameObject wellClimbTransform;
-    public GameObject wellClimbTrigger;
-    public VerticalClimbingPlayer climb;
+
+    public VerticalClimbingPlayer climbingPlayer;
 
 
-    // WellClimb script just drags the player upwards, then changes the PostProcessing.
+    // Triggered by the MaskPickup AnimationEvent
 
-    public void PutMaskOn()
+    public void MaskPickup()
     {
         Debug.Log("Mask On (^0.0^) ");
-        Debug.Log("Set Post Processy");
-        climb.enabled = true;
+        climbingPlayer.enabled = true;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    // void Start()
-    // {
-            // get PostProcessing Asset
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
 }

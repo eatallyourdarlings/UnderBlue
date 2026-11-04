@@ -20,6 +20,7 @@ public class AnimatorController : MonoBehaviour
         if(!hasBeenInteractedWith && !isLocked)
         {
             objectToAnimate.SetBool(booleanName, true);
+            // Debug.Log($"{booleanName} should be true");
             hasBeenInteractedWith = true;
             isLocked = true;
         }

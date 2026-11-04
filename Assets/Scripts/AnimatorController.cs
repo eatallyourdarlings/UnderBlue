@@ -6,12 +6,15 @@ public class AnimatorController : MonoBehaviour
 {
     public Animator objectToAnimate;
     public string booleanName;
-    public bool isMask = false;
     //controls if this script is able to be interacted with
     public bool isLocked = false;
     public bool hasBeenInteractedWith = false;
 
+    public bool isMask = false;
     public GameObject playerCamera;
+
+    public Light DirectionalLightUnder;
+    public Light DirectionalLightOver;
 
     //The function called by the InteractionController
     public void ObjectClickedOn()
@@ -31,6 +34,19 @@ public class AnimatorController : MonoBehaviour
             // GetComponent<MaskPickup>().doPickup();
         }
     }
+
+    // the WellClimbTransform's AnimationEvent starts this
+
+    private void wellClimb(){
+        DirectionalLightOver.enabled = true;
+        DirectionalLightUnder.enabled = false;
+
+        // NO MORE TRIGGER
+    }
+
+
+
+    // the Mask's AnimationEvent starts this
 
     private void maskPickup(){
         // change the parent to the Camera

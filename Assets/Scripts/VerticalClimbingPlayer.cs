@@ -4,8 +4,8 @@ public class VerticalClimbingPlayer : MonoBehaviour
 {
 
     public GameObject wellClimbTransform;
-    public Collider wellClimbTrigger;
     private FirstPersonDrifter drifter;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +34,7 @@ public class VerticalClimbingPlayer : MonoBehaviour
 
                 //Makes the GameObject "newParent" the parent of the GameObject "player".
 
-        Debug.Log("Climby On!");
+        Debug.Log("Climby Script Activate!");
         transform.parent = wellClimbTransform.transform;
 
         wellClimbTransform.GetComponent<AnimatorController>().ObjectClickedOn();
@@ -62,15 +62,15 @@ public class VerticalClimbingPlayer : MonoBehaviour
         // drags the player upwards, then changes the PostProcessing.
 
 
-        // on Well Climb Trigger
-
-
 
 
         // RESET THE PARENT TRANSFORM
         // this.transform.parent = null;
         
     }
+
+
+    
 
     // Update is called once per frame
     void Update()

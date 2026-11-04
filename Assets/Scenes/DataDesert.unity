@@ -394,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.35
+      value: -23.1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400014, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: gravity
@@ -512,7 +512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VerticalClimbingPlayer
   wellClimbTransform: {fileID: 1016220700}
-  wellClimbTrigger: {fileID: 1279283086}
 --- !u!1 &309598579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2690489295206785747, guid: 8f52ef101fda047ed9a0900fe4873b9c, type: 3}
@@ -943,7 +942,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.0024
+  m_Intensity: 0.005
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -974,7 +973,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 70a50f2820fd248f5bb45c48d0dce327, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -2997,6 +2996,7 @@ GameObject:
   - component: {fileID: 1016220701}
   - component: {fileID: 1016220702}
   - component: {fileID: 1016220703}
+  - component: {fileID: 1016220704}
   m_Layer: 0
   m_Name: WellClimbTransform
   m_TagString: Untagged
@@ -3055,10 +3055,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorController
   objectToAnimate: {fileID: 1016220702}
   booleanName: Climbing
-  isMask: 0
   isLocked: 0
   hasBeenInteractedWith: 0
+  isMask: 0
   playerCamera: {fileID: 0}
+  DirectionalLightUnder: {fileID: 410087040}
+  DirectionalLightOver: {fileID: 430086084}
+--- !u!58 &1016220704
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016220700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 3.14
 --- !u!1001 &1227217867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3308,59 +3346,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd6dd77a89e34a6084336d6736da9c0, type: 3}
---- !u!1 &1279283084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1279283085}
-  - component: {fileID: 1279283086}
-  m_Layer: 0
-  m_Name: WellClimbTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1279283085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279283084}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1279283086
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1279283084}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: 1, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1302724135
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,10 +5068,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorController
   objectToAnimate: {fileID: 1982160155}
   booleanName: PickedUp
-  isMask: 1
   isLocked: 0
   hasBeenInteractedWith: 0
+  isMask: 1
   playerCamera: {fileID: 729351239}
+  DirectionalLightUnder: {fileID: 0}
+  DirectionalLightOver: {fileID: 0}
 --- !u!1 &2060254392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5774,7 +5761,6 @@ SceneRoots:
   - {fileID: 1227217867}
   - {fileID: 238501337}
   - {fileID: 1016220701}
-  - {fileID: 1279283085}
   - {fileID: 1692692681}
   - {fileID: 1466744368}
   - {fileID: 744655275}

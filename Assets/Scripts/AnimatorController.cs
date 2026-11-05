@@ -35,19 +35,7 @@ public class AnimatorController : MonoBehaviour
         }
     }
 
-    // the WellClimbTransform's AnimationEvent starts this
-
-    private void wellClimb(){
-        DirectionalLightOver.enabled = true;
-        DirectionalLightUnder.enabled = false;
-
-        // NO MORE TRIGGER
-    }
-
-
-
     // the Mask's AnimationEvent starts this
-
     private void maskPickup(){
         // change the parent to the Camera
         transform.parent = playerCamera.transform;
@@ -68,5 +56,33 @@ public class AnimatorController : MonoBehaviour
         // change the Character controller state to climbing??
 
 }
+
+
+    // WellClimbTransform AnimationEvent 1 this
+
+    private void wellClimb(){
+        // FADE TO WHITE
+
+
+        DirectionalLightOver.enabled = true;
+        DirectionalLightUnder.enabled = false;
+
+
+    }
+
+
+
+    // WellClimbTransform AnimationEvent 2
+    private void rooneyHug(){
+        // play some spooky sound idk
+        Debug.Log("Rooney Hug!");
+        // DEACTIVATE THE CAMERA MOVEMENT
+        // ROTATE THE TRANSFORM TO LINE UP THE CAMERA TO ROONEY'S FACE
+        // FADE TO BLACK
+    }
+
+
+
+
 }
 

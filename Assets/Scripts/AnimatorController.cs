@@ -13,8 +13,10 @@ public class AnimatorController : MonoBehaviour
     public bool isMask = false;
     public GameObject playerCamera;
 
-    public Light DirectionalLightUnder;
-    public Light DirectionalLightOver;
+    // public Light DirectionalLightUnder;
+    public GameObject DirectionalLightUnder;
+    // public Light DirectionalLightOver;
+    public GameObject DirectionalLightOver;
 
     //The function called by the InteractionController
     public void ObjectClickedOn()
@@ -42,9 +44,9 @@ public class AnimatorController : MonoBehaviour
 
         Debug.Log("Mask Do Pickup!");
         // HelperFunctions.SetParent(gameObject, camera);
-        transform.localPosition = new Vector3(0,0,0.6f);
-        // transform.localRotation = Quaternion.Euler(new Vector3(-90f,0,0));
-        transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
+        // transform.localPosition = new Vector3(0,0,0.6f);
+        // transform.localRotation = Quaternion.Euler(new Vector3(90f,90f,90f));
+        // transform.localRotation = Quaternion.Euler(new Vector3(-90f,0f,0f));
 
 
         // make the umbilical appear
@@ -72,8 +74,10 @@ public class AnimatorController : MonoBehaviour
         // FADE TO WHITE
 
 
-        DirectionalLightOver.enabled = true;
-        DirectionalLightUnder.enabled = false;
+        // DirectionalLightOver.enabled = true;
+        DirectionalLightOver.SetActive(true);
+        // DirectionalLightUnder.enabled = false;
+        DirectionalLightUnder.SetActive(false);
 
 
     }

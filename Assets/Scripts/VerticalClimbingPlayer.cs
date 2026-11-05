@@ -60,7 +60,7 @@ public class VerticalClimbingPlayer : MonoBehaviour
         // Debug.Log("Set Post Processy");
 
         // drags the player upwards, then changes the PostProcessing.
-
+        // parent player to transform
 
 
 

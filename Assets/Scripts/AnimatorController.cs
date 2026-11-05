@@ -43,13 +43,21 @@ public class AnimatorController : MonoBehaviour
         Debug.Log("Mask Do Pickup!");
         // HelperFunctions.SetParent(gameObject, camera);
         transform.localPosition = new Vector3(0,0,0.6f);
-        transform.localRotation = Quaternion.Euler(new Vector3(-90f,0,0));
+        // transform.localRotation = Quaternion.Euler(new Vector3(-90f,0,0));
+        transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
 
-        // play animation of mask pickup
-        // change the Post Processing settings to be a heavy, offset vignette    
 
-        // do something with the lighting?
+        // make the umbilical appear
+
+
+                // do something with the lighting?
             // increase the width of the spotlight
+
+
+        // lock player movement (reduced speed)
+        // disable the player camera script
+
+            // change the Post Processing settings to be a heavy, offset vignette
         // start the mask-breathing SFX
         // start the spooky chime sound that Josie made at Keon Park
             // after that, start Rooney's singing 

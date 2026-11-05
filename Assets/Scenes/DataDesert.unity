@@ -930,7 +930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &430086083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4570,18 +4570,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrefabArrayQuadrant
   aerialMeshes:
-  - {fileID: 919132149155446097, guid: 73e8034b8f7f943bbbf422ac28542b90, type: 3}
-  - {fileID: 919132149155446097, guid: 7072bb80e43c24b3d8e965fa216858a6, type: 3}
-  - {fileID: 919132149155446097, guid: 99311936640714eacbad38a86a56030c, type: 3}
-  - {fileID: 919132149155446097, guid: df8ffb2ff06184e5a8376b1ba187f68b, type: 3}
-  - {fileID: 919132149155446097, guid: 4189cebc7956b425eb2620c8232062ab, type: 3}
-  - {fileID: 919132149155446097, guid: 9b5197fe8d5a94863936e6780cfe957b, type: 3}
-  - {fileID: 919132149155446097, guid: 0688e8c8ee06d43c2a36a734344b4aa7, type: 3}
-  - {fileID: 919132149155446097, guid: fe83a8871d0204847a4f050dc1bc75fe, type: 3}
-  - {fileID: 919132149155446097, guid: 2dcc375cbced349a8a24d4eaa703e513, type: 3}
-  - {fileID: 919132149155446097, guid: cf968211d0f93493a88d0a0aa58885aa, type: 3}
-  - {fileID: 919132149155446097, guid: 52759891eee504d62b7ca151719cb313, type: 3}
-  baseMesh: {fileID: 919132149155446097, guid: 5b475eb3a57ee4e0f904ea60a9d094c7, type: 3}
+  - {fileID: 919132149155446097, guid: d464bbdfbed5f43e9a028ab6027fc25d, type: 3}
+  - {fileID: 919132149155446097, guid: a74f25922d3c74973b40452bb0f331f5, type: 3}
+  - {fileID: 919132149155446097, guid: 93ca3ef5e9ad64ed5a1d6e5b0ad002f8, type: 3}
+  - {fileID: 919132149155446097, guid: 2829c93e155fa49658aaba104b4bb320, type: 3}
+  - {fileID: 919132149155446097, guid: 04231ac99978c413b80db2465ee48c5a, type: 3}
+  - {fileID: 919132149155446097, guid: 4e78418b84ab240d3bad6aa38f1b8309, type: 3}
+  - {fileID: 919132149155446097, guid: 2361fbc8ce32b4cdc8d41bdd900f3e23, type: 3}
+  - {fileID: 919132149155446097, guid: 7fb766bd3f8ec4a7d9f3c58a5ed99412, type: 3}
+  - {fileID: 919132149155446097, guid: a4fa9474f9a64421a9e457af54552ca8, type: 3}
+  - {fileID: 919132149155446097, guid: a4b6c937a0f674d29aa8ed2590758bb2, type: 3}
+  - {fileID: 919132149155446097, guid: 2a420697eeb254d2fbf79fbe64f84406, type: 3}
+  baseMesh: {fileID: 919132149155446097, guid: a7031798957ef4782a9847c5e05c422e, type: 3}
   quadrantCount: 11
   noiseScale: 0.022
   noiseSpeed: 0.022

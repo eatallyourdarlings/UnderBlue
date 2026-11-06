@@ -382,7 +382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -398,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalPosition.y
@@ -406,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -2.86
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       propertyPath: m_LocalRotation.w
@@ -477,6 +481,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       insertIndex: -1
       addedObject: {fileID: 621164722}
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 488388356}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
       insertIndex: -1
@@ -1396,6 +1403,37 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &488388355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488388356}
+  m_Layer: 0
+  m_Name: CameraMaskTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &488388356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488388355}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 729351253}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &514126648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,6 +2257,11 @@ MonoBehaviour:
 --- !u!20 &729351252 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
+  m_PrefabInstance: {fileID: 238501337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &729351253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 7d046b1de5c6f45de8f20035cfb42c08, type: 3}
   m_PrefabInstance: {fileID: 238501337}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &734837982
@@ -3127,7 +3170,10 @@ MonoBehaviour:
   isLocked: 0
   hasBeenInteractedWith: 0
   isMask: 0
+  maskTransform: {fileID: 0}
+  cameraMaskTransform: {fileID: 0}
   playerCamera: {fileID: 0}
+  climbingPlayer: {fileID: 0}
   DirectionalLightUnder: {fileID: 410087039}
   DirectionalLightOver: {fileID: 430086082}
 --- !u!58 &1016220704
@@ -4931,7 +4977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4939,15 +4985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4963,7 +5009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_Name
-      value: MaskRotated
+      value: Mask2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d35ce23d669584b63bcefe236bc21366, type: 3}
       propertyPath: m_TagString
@@ -5166,7 +5212,7 @@ GameObject:
   - component: {fileID: 2036758659}
   - component: {fileID: 2036758660}
   m_Layer: 0
-  m_Name: MaskTransform
+  m_Name: MaskTrigger
   m_TagString: Interactive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5179,14 +5225,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036758656}
-  m_LocalRotation: {x: 0.025217414, y: -0, z: -0, w: 0.99968207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1982160151}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -89.34, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -32}
@@ -5230,7 +5276,10 @@ MonoBehaviour:
   isLocked: 0
   hasBeenInteractedWith: 0
   isMask: 1
+  maskTransform: {fileID: 1982160151}
+  cameraMaskTransform: {fileID: 488388356}
   playerCamera: {fileID: 729351239}
+  climbingPlayer: {fileID: 0}
   DirectionalLightUnder: {fileID: 410087039}
   DirectionalLightOver: {fileID: 430086082}
 --- !u!1 &2060254392

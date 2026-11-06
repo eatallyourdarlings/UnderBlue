@@ -11,7 +11,12 @@ public class AnimatorController : MonoBehaviour
     public bool hasBeenInteractedWith = false;
 
     public bool isMask = false;
+
+
+    public Transform maskTransform;
+    public Transform cameraMaskTransform;
     public GameObject playerCamera;
+    public VerticalClimbingPlayer climbingPlayer;
 
     // public Light DirectionalLightUnder;
     public GameObject DirectionalLightUnder;
@@ -37,12 +42,27 @@ public class AnimatorController : MonoBehaviour
     }
 
 
+    void Update(){
+        if (objectToAnimate.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f){
+            Debug.Log("Animation done.");
+
+            if(isMask){
+                MaskPickup(); 
+                // transform.GetChild(0).gameObject.getComponent<MaskPickup>
+            }
+        }
+    }
+
 
     private void MaskClickedOn(){
-        // change the parent to the Camera
-        transform.parent = playerCamera.transform;
 
-        // set the position of the MaskTransform
+        // change the parent to the Camera
+        // GetChild(0).parent = cameraMaskTransform;
+        maskTransform.parent = cameraMaskTransform;
+        // transform.parent = playerCamera.transform;
+
+
+    // set the position of the MaskTransform
         // transform.localPosition = new Vector3(0f,0f,-0.5f);
         // transform.localRotation = transform.parent.rotation;
         // transform.localRotation = Quaternion.Euler(new Vector3(90f,0f,0f));
@@ -69,7 +89,12 @@ public class AnimatorController : MonoBehaviour
             // after that, start Rooney's singing 
         // change the Character controller state to climbing??
 
-}
+    }
+
+    private void MaskPickup(){
+        Debug.Log("Mask Pickup");
+        // climbingPlayer.enabled = true;
+    }
 
 
     // WellClimbTransform AnimationEvent 1 this

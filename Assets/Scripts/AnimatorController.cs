@@ -12,6 +12,9 @@ public class AnimatorController : MonoBehaviour
 
     public bool isMask = false;
 
+    public GameObject whiteImage;
+    public GameObject blackImage;
+
 
     public Transform maskTransform;
     public Transform cameraMaskTransform;
@@ -79,7 +82,12 @@ public class AnimatorController : MonoBehaviour
 
     // WellClimbTransform AnimationEvent 1 this
     private void wellClimb(){
-        // FADE TO WHITE
+
+        // TOGGLE WHITE
+        whiteImage.SetActive(true);
+        // canvasImage.GetComponent<Image>().enabled = true;
+        // FADE TO WHITE AND BACK
+
 
 
         // DirectionalLightOver.enabled = true;

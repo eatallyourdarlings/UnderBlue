@@ -102,15 +102,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 12
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0.3986711, z: 0}
+        outSlope: {x: 0, y: 0.3986711, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 12.566667
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0.5, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -120,8 +120,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 13.5
         value: {x: 1, y: 0.5, z: 0}
-        inSlope: {x: 0.76300585, y: 0.45086706, z: 0}
-        outSlope: {x: 0.76300585, y: 0.45086706, z: 0}
+        inSlope: {x: 0.76300585, y: 0, z: 0}
+        outSlope: {x: 0.76300585, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -325,15 +325,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 12
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.3986711
+        outSlope: 0.3986711
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 12.566667
-        value: 0
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -343,8 +343,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 13.5
         value: 0.5
-        inSlope: 0.45086706
-        outSlope: 0.45086706
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -427,15 +427,22 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 12.016666
+  - time: 9.983334
     functionName: wellClimb
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 13.65
+  - time: 13.233334
     functionName: rooneyHug
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 15.45
+    functionName: rooneyMerge
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

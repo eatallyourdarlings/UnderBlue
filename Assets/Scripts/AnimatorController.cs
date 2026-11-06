@@ -16,7 +16,7 @@ public class AnimatorController : MonoBehaviour
     public Transform maskTransform;
     public Transform cameraMaskTransform;
     public GameObject playerCamera;
-    public VerticalClimbingPlayer climbingPlayer;
+    
 
     // public Light DirectionalLightUnder;
     public GameObject DirectionalLightUnder;
@@ -42,63 +42,42 @@ public class AnimatorController : MonoBehaviour
     }
 
 
-    void Update(){
-        if (objectToAnimate.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f){
-            Debug.Log("Animation done.");
 
-            if(isMask){
-                MaskPickup(); 
-                // transform.GetChild(0).gameObject.getComponent<MaskPickup>
-            }
-        }
-    }
+// MOVED TO MASK CONTROLLER
+    // void Update(){
+    //     if (objectToAnimate.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f){
+    //         Debug.Log("Animation done.");
 
+    //         if(isMask){
+    //             MaskPickup(); 
+    //             // transform.GetChild(0).gameObject.getComponent<MaskPickup>
+    //         }
+    //     }
+    // }
+
+
+    // // AFTER THE MASK ANIMATION
+    // private void MaskPickup(){
+    //     Debug.Log("Mask Pickup");
+
+    //     // START THE PLAYER CLIMB SCRIPT
+    //     // climbingPlayer.SetActive(false);
+    // }
 
     private void MaskClickedOn(){
 
-        // change the parent to the Camera
-        // GetChild(0).parent = cameraMaskTransform;
-        maskTransform.parent = cameraMaskTransform;
-        // transform.parent = playerCamera.transform;
-
-
-    // set the position of the MaskTransform
-        // transform.localPosition = new Vector3(0f,0f,-0.5f);
-        // transform.localRotation = transform.parent.rotation;
-        // transform.localRotation = Quaternion.Euler(new Vector3(90f,0f,0f));
-
         Debug.Log("Mask Clicked On!");
-        // HelperFunctions.SetParent(gameObject, camera);
-        // transform.localPosition = new Vector3(0,0,0.6f);
-        // transform.localRotation = Quaternion.Euler(new Vector3(-90f,0f,0f));
 
-
-        // make the umbilical appear
-
-
-                // do something with the lighting?
-            // increase the width of the spotlight
-
-
-        // lock player movement (reduced speed)
-        // disable the player camera script
-
-            // change the Post Processing settings to be a heavy, offset vignette
-        // start the mask-breathing SFX
-        // start the spooky chime sound that Josie made at Keon Park
-            // after that, start Rooney's singing 
-        // change the Character controller state to climbing??
+        // change the parent to the Camera
+        maskTransform.parent = cameraMaskTransform;
 
     }
 
-    private void MaskPickup(){
-        Debug.Log("Mask Pickup");
-        // climbingPlayer.enabled = true;
-    }
+
+
 
 
     // WellClimbTransform AnimationEvent 1 this
-
     private void wellClimb(){
         // FADE TO WHITE
 
@@ -107,8 +86,6 @@ public class AnimatorController : MonoBehaviour
         DirectionalLightOver.SetActive(true);
         // DirectionalLightUnder.enabled = false;
         DirectionalLightUnder.SetActive(false);
-
-
     }
 
 
@@ -117,10 +94,20 @@ public class AnimatorController : MonoBehaviour
     private void rooneyHug(){
         // play some spooky sound idk
         Debug.Log("Rooney Hug!");
+
         // DEACTIVATE THE CAMERA MOVEMENT
         // ROTATE THE TRANSFORM TO LINE UP THE CAMERA TO ROONEY'S FACE
         // FADE TO BLACK
     }
+
+    // WellClimbTransform AnimationEvent 3
+    private void rooneyMerge(){
+        Debug.Log("Rooney Merge!");
+
+        // reactive the drifter movement
+        // FADE BACK IN FROM BLACK
+    }
+
 
 
 

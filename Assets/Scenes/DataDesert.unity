@@ -1166,7 +1166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &430086083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3173,7 +3173,6 @@ MonoBehaviour:
   maskTransform: {fileID: 0}
   cameraMaskTransform: {fileID: 0}
   playerCamera: {fileID: 0}
-  climbingPlayer: {fileID: 0}
   DirectionalLightUnder: {fileID: 410087039}
   DirectionalLightOver: {fileID: 430086082}
 --- !u!58 &1016220704
@@ -5279,7 +5278,6 @@ MonoBehaviour:
   maskTransform: {fileID: 1982160151}
   cameraMaskTransform: {fileID: 488388356}
   playerCamera: {fileID: 729351239}
-  climbingPlayer: {fileID: 0}
   DirectionalLightUnder: {fileID: 410087039}
   DirectionalLightOver: {fileID: 430086082}
 --- !u!1 &2060254392

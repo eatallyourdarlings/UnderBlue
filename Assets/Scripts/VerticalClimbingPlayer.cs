@@ -7,7 +7,6 @@ public class VerticalClimbingPlayer : MonoBehaviour
     private FirstPersonDrifter drifter;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //ACTIVATE VERTICAL CLIMB COMPONENT SO THAT THESE ARE CALLED ON START
@@ -19,20 +18,6 @@ public class VerticalClimbingPlayer : MonoBehaviour
         // MouseLook.MaximumY
         // MouseLook.MinimumY
             // etc
-
-        // Set Parent to PlayerClimbTransform
-        // 
-
-        // move the Transform upwards
-
-
-        // Changing the parent will modify the parent-relative position, scale and rotation but keep the world space position, rotation and scale the same.
-
-
-
-        // HelperFunctions.SetParent(transform.gameObject, newParent);
-
-                //Makes the GameObject "newParent" the parent of the GameObject "player".
 
         Debug.Log("Climby Script Activate!");
         transform.parent = wellClimbTransform.transform;
@@ -54,8 +39,6 @@ public class VerticalClimbingPlayer : MonoBehaviour
             //Display the name of the grand parent of the player.
             Debug.Log("Grand parent: " + transform.parent.parent.name);
         }
-
-
 
         // get PostProcessing Asset
         // Debug.Log("Set Post Processy");

@@ -11,7 +11,7 @@ public class MaskController : MonoBehaviour
 
     public void MaskPickup()
     {
-        Debug.Log("Mask On (^0.0^) ");
+        Debug.Log("Mask On (^0.0^) activating VerticalClimbingPlayer script");
         climbingPlayer.enabled = true;
     }
 }

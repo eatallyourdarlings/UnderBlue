@@ -31,21 +31,25 @@ public class AnimatorController : MonoBehaviour
         }
 
         if(isMask){
-            maskPickup(); 
+            MaskClickedOn(); 
             // transform.GetChild(0).gameObject.
-            // GetComponent<MaskPickup>().doPickup();
         }
     }
 
-    // the Mask's AnimationEvent starts this
-    private void maskPickup(){
+
+
+    private void MaskClickedOn(){
         // change the parent to the Camera
         transform.parent = playerCamera.transform;
 
-        Debug.Log("Mask Do Pickup!");
+        // set the position of the MaskTransform
+        // transform.localPosition = new Vector3(0f,0f,-0.5f);
+        // transform.localRotation = transform.parent.rotation;
+        // transform.localRotation = Quaternion.Euler(new Vector3(90f,0f,0f));
+
+        Debug.Log("Mask Clicked On!");
         // HelperFunctions.SetParent(gameObject, camera);
         // transform.localPosition = new Vector3(0,0,0.6f);
-        // transform.localRotation = Quaternion.Euler(new Vector3(90f,90f,90f));
         // transform.localRotation = Quaternion.Euler(new Vector3(-90f,0f,0f));
 
 

@@ -43,6 +43,7 @@ public class VerticalClimbingPlayer : MonoBehaviour
         // drifter.gravity = 0;
         // Debug.Log($"Drifter Gravity: {drifter.gravity}");
         drifter.enabled = false;
+        transform.localPosition = new Vector3(0f,0f,0f);
 
         //Display the parent's name in the console.
         Debug.Log("Parent: " + transform.parent.name);

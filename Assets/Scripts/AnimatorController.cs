@@ -153,6 +153,7 @@ public class AnimatorController : MonoBehaviour
         // turn on the drifter script
         // reactive the drifter movement
         drifter.enabled = true;
+        drifter.walkSpeed = 3.0f;
         // slower movement variables
 
         // breathing sound

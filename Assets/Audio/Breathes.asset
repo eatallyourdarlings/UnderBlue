@@ -1,5 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-7977780305155037124
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: breath4_{-7977780305155037124}
+  m_AudioClip: {fileID: 8300000, guid: 823667c8e39734dc0b20f57a43d68c66, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
 --- !u!1233149941 &-5499900462818924555
 AudioContainerElement:
   m_ObjectHideFlags: 1
@@ -7,7 +17,7 @@ AudioContainerElement:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: breath3_{-5499900462818924555}
-  m_AudioClip: {fileID: 8300000, guid: 987dad2069c894fcca874e268f869e65, type: 3}
+  m_AudioClip: {fileID: 8300000, guid: 74d38631c249f4fa3ab701c7acaa88bd, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1233149941 &2910905897989693115
@@ -17,7 +27,7 @@ AudioContainerElement:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: breath1_{2910905897989693115}
-  m_AudioClip: {fileID: 8300000, guid: 00a76658bd8304fcfb9c6e257191c46a, type: 3}
+  m_AudioClip: {fileID: 8300000, guid: 1da78fd1747934a7db44ec9793d21524, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
@@ -39,6 +49,7 @@ AudioRandomContainer:
   - {fileID: 2910905897989693115}
   - {fileID: 8337566859024254861}
   - {fileID: -5499900462818924555}
+  - {fileID: -7977780305155037124}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 0
   m_TriggerMode: 1
@@ -55,6 +66,6 @@ AudioContainerElement:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: breath2_{8337566859024254861}
-  m_AudioClip: {fileID: 8300000, guid: 41e1f47894b334567a50f18a51383a10, type: 3}
+  m_AudioClip: {fileID: 8300000, guid: 1248712f1c14d475387a56f58cc84d8c, type: 3}
   m_Volume: 0
   m_Enabled: 1

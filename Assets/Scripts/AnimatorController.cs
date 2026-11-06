@@ -21,6 +21,13 @@ public class AnimatorController : MonoBehaviour
     public GameObject playerCamera;
 
     public GameObject rooneyMesh;
+    // public GameObject megastructureAudio;
+    public GameObject desertWind;
+    public GameObject breathAudio;
+
+    public GameObject umbilicalAnchor;
+    public GameObject wiringSystem;
+
     public FirstPersonDrifter drifter;
     //public VerticalClimbingPlayer climbingPlayer;
 
@@ -100,7 +107,11 @@ public class AnimatorController : MonoBehaviour
     }
 
     private void wellExit(){
+        Debug.Log("Well Exit!");
         whiteImage.SetActive(false);
+
+        // MOVE THE UMBILICAL PARENT TO ROONEY'S MOUTH
+        umbilicalAnchor.transform.position = new Vector3(2.2f,1.3f,0f);
     }
 
     // WellClimbTransform AnimationEvent 2
@@ -109,21 +120,45 @@ public class AnimatorController : MonoBehaviour
         // play some spooky sound idk
         Debug.Log("Rooney Hug!");
 
+        desertWind.SetActive(true);
+
         // DEACTIVATE THE CAMERA MOVEMENT
-        // ROTATE THE TRANSFORM TO LINE UP THE CAMERA TO ROONEY'S FACE
-        // FADE TO BLACK
+
+        // ROTATE THE TRANSFORM TO LINE UP THE CAMERA TO ROONEY'S FACE?
+
+        
     }
 
     // WellClimbTransform AnimationEvent 3
     private void rooneyMerge(){
         Debug.Log("Rooney Merge!");
 
-        // reactive the drifter movement
         // FADE BACK IN FROM BLACK
+        blackImage.SetActive(true);
+
+        // stop the humming? it shouldnt be looping
+
+
+        // disappear rooney
+        rooneyMesh.SetActive(false);
+
+        // megastructureAudio.SetActive(true);
+
+    }
+
+    private void rooneyGone(){
+        blackImage.SetActive(false);
+
 
         // turn on the drifter script
+        // reactive the drifter movement
         drifter.enabled = true;
-        rooneyMesh.SetActive(false);
+        // slower movement variables
+
+        // breathing sound
+
+        breathAudio.SetActive(true);
+        wiringSystem.SetActive(false);
     }
 }
 

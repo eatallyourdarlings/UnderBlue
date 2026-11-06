@@ -13,11 +13,13 @@ Remember to take screen recordings and screenshots, keeping em at /Screenshots/ 
 
 ## things i am proud of!!
 
-  - technical art tricks and shortcuts I learnt and practiced, particularly making the most of one scrolling fog ShaderGraph
+  - technical art tricks and shortcuts I learnt and practiced, 
+  - making the most of the tricks I learnt in this one scrolling fog ShaderGraph tutorial
   - modelling with curves and array modifier (for the hooks, the barbed wire, the chains)
   - manually messing with Level of Detail; I'd been wanting to figure out how to do that for a while [:
   - collaborating with a friend on sound design for the first time!
   - the PrefabArrayQuadrant that makes the big grid of meshes, basically replicating the effect of 2 x Blender Array modifier.
+  - doing a bare-minimum prototype of a bunch of little details I imagined, like the umbilical cord using the Wiring System package.
 
 ## Audio
 

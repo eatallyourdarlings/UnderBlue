@@ -37,6 +37,8 @@ public class AnimatorController : MonoBehaviour
     public GameObject DirectionalLightUnder;
     // public Light DirectionalLightOver;
     public GameObject DirectionalLightOver;
+    
+    public GameObject globalVolume;
 
     //The function called by the InteractionController
     public void ObjectClickedOn()
@@ -135,6 +137,9 @@ public class AnimatorController : MonoBehaviour
 
         // FADE BACK IN FROM BLACK
         blackImage.SetActive(true);
+        
+        globalVolume.SetActive(true);
+        // wellCollider.SetActive(true);
 
         // stop the humming? it shouldnt be looping
 

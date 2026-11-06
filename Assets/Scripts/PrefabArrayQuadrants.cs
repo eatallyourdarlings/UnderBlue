@@ -100,9 +100,9 @@ public class PrefabArrayQuadrant : MonoBehaviour
             {
                 // wobbling in the oncewaves
                 // scrolling the noise texture!x
-                float newY = Mathf.PerlinNoise(x * noiseScale + Time.time * noiseSpeed, z * noiseScale + Time.time * noiseSpeed); //  * 3f //  - 1.65f
+                float newY = Mathf.PerlinNoise(x * noiseScale + Time.time * noiseSpeed, z * noiseScale + Time.time * noiseSpeed); //  * 3f //  
 
-                aerialObjects[x, z].transform.position = new Vector3(aerialObjects[x, z].transform.position.x, newY, aerialObjects[x, z].transform.position.z); 
+                aerialObjects[x, z].transform.position = new Vector3(aerialObjects[x, z].transform.position.x, newY - 1f, aerialObjects[x, z].transform.position.z); 
             }
 
         

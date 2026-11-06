@@ -1,5 +1,3 @@
-
-
 # UnderBlue
 
 - Using Unity 6000.3.5.f2
@@ -11,15 +9,22 @@ Remember to take screen recordings and screenshots, keeping em at /Screenshots/ 
 - [GeneBomb SpeedRun](https://www.youtube.com/watch?v=zasvFmSZvT4)
 
 
-## things i am proud of!!
+«a mnemohazardous disasterscape in the outer reaches of the DataDeserts»
+Olive R.F. Sept-Nov 2026
+for RMIT Game Design Studio final project - Interactive Environment
 
-  - technical art tricks and shortcuts I learnt and practiced, 
-  - making the most of the tricks I learnt in this one scrolling fog ShaderGraph tutorial
+This was [lovingly overscoped](https://kinopio.club/underblue-ZQtZwKDj6ty4V22MM2fqY) to be a game about falling through megastructures that I could make if I had worked 3 days a week on it for a couple months, but that turned out to be unrealistic, and not accounting for the amount of tedious fiddling I'd have to do in Unity (i feel so bitrotten). So I scoped it down and focused on the "intro" and the result is this strange little oneiric scene.
+
+
+things i am proud of!!
+  - all the Blender technical art tricks and shortcuts I learnt and practiced...
   - modelling with curves and array modifier (for the hooks, the barbed wire, the chains)
-  - manually messing with Level of Detail; I'd been wanting to figure out how to do that for a while [:
-  - collaborating with a friend on sound design for the first time!
-  - the PrefabArrayQuadrant that makes the big grid of meshes, basically replicating the effect of 2 x Blender Array modifier.
-  - doing a bare-minimum prototype of a bunch of little details I imagined, like the umbilical cord using the Wiring System package.
+  - collaborating with a friend on sound design for the first time! Josie Halfsunk brought so much to the atmosphere (and my mum with the eery humming)
+  - making the most of the tricks I learnt in this one [foggy ShaderGraph tutorial](https://paulinavfx.com/how-to-create-a-low-lying-fog-effect-with-unitys-shadergraph/)
+  - manually messing with Level of Detail of the imported meshes; I'd been wanting to figure out how to do that for a while [:
+  - the PrefabArrayQuadrant script that makes the big grid of meshes, basically replicating the effect of 2 x Blender Array modifier.
+  - doing a bare-minimum prototype of a bunch of the little details I'd planned, like the umbilical cord using the [Wiring System package](https://ciihuycom.itch.io/ciihuy-power-pole-wiring-system).
+  - practicing more photo-collage textures (although leaving it a bit too late and working on them in the last week)
 
 ## Audio
 

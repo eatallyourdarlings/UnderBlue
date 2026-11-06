@@ -4,7 +4,7 @@ public class VerticalClimbingPlayer : MonoBehaviour
 {
 
     public GameObject wellClimbTransform;
-    private FirstPersonDrifter drifter;
+    public FirstPersonDrifter drifter;
 
 
     void Start()
@@ -22,9 +22,7 @@ public class VerticalClimbingPlayer : MonoBehaviour
         Debug.Log("Climby Script Activate!");
         transform.parent = wellClimbTransform.transform;
 
-        wellClimbTransform.GetComponent<AnimatorController>().ObjectClickedOn();
-
-        drifter = GetComponent<FirstPersonDrifter>();
+        // drifter = GetComponent<FirstPersonDrifter>();
         // drifter.gravity = 0;
         // Debug.Log($"Drifter Gravity: {drifter.gravity}");
         drifter.enabled = false;

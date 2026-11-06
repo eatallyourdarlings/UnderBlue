@@ -19,6 +19,11 @@ public class AnimatorController : MonoBehaviour
     public Transform maskTransform;
     public Transform cameraMaskTransform;
     public GameObject playerCamera;
+
+    public GameObject rooneyMesh;
+    public FirstPersonDrifter drifter;
+    //public VerticalClimbingPlayer climbingPlayer;
+
     
 
     // public Light DirectionalLightUnder;
@@ -85,10 +90,8 @@ public class AnimatorController : MonoBehaviour
 
         // TOGGLE WHITE
         whiteImage.SetActive(true);
-        // canvasImage.GetComponent<Image>().enabled = true;
+        // canvasImage.GetComponent<Image>().colour = alpha lerp whatevver;
         // FADE TO WHITE AND BACK
-
-
 
         // DirectionalLightOver.enabled = true;
         DirectionalLightOver.SetActive(true);
@@ -96,10 +99,13 @@ public class AnimatorController : MonoBehaviour
         DirectionalLightUnder.SetActive(false);
     }
 
-
+    private void wellExit(){
+        whiteImage.SetActive(false);
+    }
 
     // WellClimbTransform AnimationEvent 2
     private void rooneyHug(){
+        whiteImage.SetActive(false);
         // play some spooky sound idk
         Debug.Log("Rooney Hug!");
 
@@ -114,11 +120,10 @@ public class AnimatorController : MonoBehaviour
 
         // reactive the drifter movement
         // FADE BACK IN FROM BLACK
+
+        // turn on the drifter script
+        drifter.enabled = true;
+        rooneyMesh.SetActive(false);
     }
-
-
-
-
-
 }
 
